@@ -1,55 +1,60 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+  createMuiTheme,
+  makeStyles,
+  ThemeProvider,
+} from "@material-ui/core/styles";
+
+import Home from "./screens/Home";
+import Navbar from "./components/Navbar";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#E8C547",
+    },
+    secondary: {
+      main: "#30323D",
+    },
+  },
+  typography: {
+    fontFamily: ["Rajdhani", "sans-serif"],
+  },
+});
+
+const useStyles = makeStyles((theme) => ({
+  wrapper: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+    width: '100vw',
+    height: '100vh',
+  },
+  body: {
+    backgroundColor: '#30323D',
+    color: 'white',
+    flex: 1,
+  },
+}));
 
 export default function App() {
+  const classes = useStyles();
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+    <ThemeProvider theme={theme}>
+      <div className={classes.wrapper}>
+        <Navbar />
+        <div color="primary" className={classes.body}>
+          <Router>
+            <Switch>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </Router>
+        </div>
       </div>
-    </Router>
+    </ThemeProvider>
   );
-
-  function Home() {
-    return <h2>Home</h2>;
-  }
-  
-  function About() {
-    return <h2>About</h2>;
-  }
-  
-  function Users() {
-    return <h2>Users</h2>;
-  }
 }
