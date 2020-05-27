@@ -2,13 +2,15 @@ import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-import Container from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import ArrowIcon from "@material-ui/icons/playArrow";
 
-import ProfilePicture from "../../img/profile-picture.jpg";
-import "./style.css";
+import { FormControl } from '@material-ui/core';
+
+import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,14 +23,12 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    borderBottom: [`2px dotted ${theme.palette.primary.main}` ],
-    marginBottom: theme.spacing(5),
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
-    fontSize: "2rem",
+    textAlign: "center",
   },
   text: {
     display: "flex",
@@ -49,9 +49,21 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.2rem",
     width: 410,
   },
+  textField: {
+      color: 'white',
+      bckgroundColor: theme.palette.secondary.light,
+      width: '100%',
+      textAlign: 'center',
+      marginBottom: theme.spacing(2),
+  },
+  textfieldContainer: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+  },
 }));
 
-const Intro = () => {
+const Contact = () => {
   const classes = useStyles();
   return (
     <Container
@@ -61,30 +73,24 @@ const Intro = () => {
       data-aos-delay="100"
       data-aos-duration="1000"
     >
-      <img
-        src={ProfilePicture}
-        alt="Profile Picture"
-        className={classes.picture}
-      />
-      <div className={classes.text}>
-        <Typography className={[classes.title, "typewriter-effect"]}>
-          Hi. My name is <span className={classes.name}>Sebastian Biehl</span>.
-        </Typography>
-        <div>
-          <Typography className={[classes.title, "typewriter-effect-2"]}>
-            I'm a German Web Developer.
+      <Grid container spacing={5} justify="center" alignItems="center">
+        <Grid item xs={12}>
+          <Typography variant="h2" className={classes.title}>
+            Contact
           </Typography>
-        </div>
-        <Button
-          color="primary"
-          variant="outlined"
-          className={[classes.button, "appear"]}
-        >
-          View my work <ArrowIcon />
-        </Button>
-      </div>
+        </Grid>
+        <Grid xs={6} item direction="column">
+            <FormControl fullWidth>
+            <TextField label="Name" variant="filled" className={classes.textField} />
+            <TextField label="Email" variant="filled" className={classes.textField} />
+            <TextField label="Message" variant="filled" multiline rows={10} className={classes.textField} />
+
+            <Button variant="contained" color="primary">Submit</Button>
+            </FormControl>
+        </Grid>
+        </Grid>
     </Container>
   );
 };
 
-export default Intro;
+export default Contact;

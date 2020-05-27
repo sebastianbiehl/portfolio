@@ -8,7 +8,7 @@ import Grid from "@material-ui/core/Grid";
 
 import Skill from "../../components/Skill";
 
-import ProfilePicture from '../../img/profile-picture.jpg';
+import ProfilePicture from '../../assets/profile-picture.jpg';
 
 import AOS from "aos";
 import "aos/dist/aos.css";

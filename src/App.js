@@ -9,6 +9,8 @@ import {
 import Home from "./screens/Home";
 import Navbar from "./components/Navbar";
 
+import Footer from './components/Footer';
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -45,6 +47,7 @@ export default function App() {
         <Navbar />
         <div color="primary" className={classes.body}>
                 <Home />
+                <Footer />
         </div>
       </div>
     </ThemeProvider>
