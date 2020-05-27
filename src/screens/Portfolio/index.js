@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     height: "auto",
+    minHeight: '100vh',
     flex: 1,
     alignItems: "center",
     justifyContent: "center",

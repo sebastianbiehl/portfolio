@@ -2,7 +2,6 @@ import React from "react";
 
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import ArrowIcon from '@material-ui/icons/playArrow';
 
@@ -15,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        borderBottom: [`4px solid ${theme.palette.primary.main}`]
+        borderBottom: [`4px solid ${theme.palette.primary.main}`],
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -44,7 +43,7 @@ const Intro = () => {
   return (
     <div className={classes.root}>
         <div className="background">
-            <span></span>
+             <span></span>
             <span></span>
             <span></span>
             <span></span>
