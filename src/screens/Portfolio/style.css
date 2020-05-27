@@ -1,0 +1,60 @@
+.typewriter-effect {
+    width: 0;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1rem solid #E8C547; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+        typing 3.5s steps(40, end),
+      blink-caret 1s step-end infinite;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .typewriter-effect-2 {
+    width: 0;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1rem solid #E8C547; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+        typing 3.5s steps(40, end),
+      blink-caret 1s step-end infinite;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .appear {
+      opacity: 0;
+      animation: appear 1s;
+      animation-delay: 12s;
+      animation-fill-mode: forwards;
+  }
+
+  @keyframes appear {
+      from { opacity: 0 }
+      to { opacity: 100 }
+  }
+
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    99% { border-right-width: .1rem }
+    to { 
+        width: 100%;
+        border-right-width: 0;
+     }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: '#E8C547' }
+    50% { border-color: transparent};
+  }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret2 {
+        from, to { border-color: '#E8C547' }
+        50% { border-color: transparent};
+      }

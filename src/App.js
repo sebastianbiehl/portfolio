@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import {
   createMuiTheme,
@@ -17,6 +16,7 @@ const theme = createMuiTheme({
     },
     secondary: {
       main: "#30323D",
+      light: "#D4D4D7",
     },
   },
   typography: {
@@ -29,8 +29,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    width: '100vw',
-    height: '100vh',
   },
   body: {
     backgroundColor: '#30323D',
@@ -46,13 +44,7 @@ export default function App() {
       <div className={classes.wrapper}>
         <Navbar />
         <div color="primary" className={classes.body}>
-          <Router>
-            <Switch>
-              <Route path="/">
                 <Home />
-              </Route>
-            </Switch>
-          </Router>
         </div>
       </div>
     </ThemeProvider>

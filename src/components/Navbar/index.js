@@ -36,10 +36,10 @@ const Navbar = () => {
                     <MenuIcon />
                 </IconButton> */}
                 <div className={classes.nav}>
-                    <Button color="inherit" className={classes.navItem}>HOME</Button>
-                    <Button color="inherit" className={classes.navItem}>ABOUT</Button>
-                    <Button color="inherit" className={classes.navItem}>PORTFOLIO</Button>
-                    <Button color="inherit" className={classes.navItem}>CONTACT</Button>
+                    <Button color="inherit" href="#home" className={classes.navItem}>HOME</Button>
+                    <Button color="inherit" href="#about" className={classes.navItem}>ABOUT</Button>
+                    <Button color="inherit" href="#portfolio" className={classes.navItem}>PORTFOLIO</Button>
+                    <Button color="inherit" href="#contact" className={classes.navItem}>CONTACT</Button>
                 </div>
                 </Toolbar>
             </AppBar>
