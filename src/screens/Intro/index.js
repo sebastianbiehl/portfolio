@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import ArrowIcon from '@material-ui/icons/playArrow';
 
-import './style.css';
+import './style.scss';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -44,6 +44,28 @@ const Intro = () => {
     const classes = useStyles();
   return (
     <Container className={classes.root}>
+        <div className="background">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
         <div id="home" className={classes.text}>
             <Typography className={[classes.title, 'typewriter-effect']} >Hi. My name is <span className={classes.name}>Sebastian Biehl</span>.</Typography>
             <div>

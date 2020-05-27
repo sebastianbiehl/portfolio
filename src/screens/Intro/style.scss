@@ -1,5 +1,49 @@
+.background {
+  z-index: 10;
+}
+
+$particleSize: 7.5vmin;
+$animationDuration: 6s;
+$amount: 12;
+.background span {
+  width: $particleSize;
+  height: $particleSize;
+  border-radius: $particleSize;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-duration: $animationDuration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  $colors: (
+    #E8C547,
+    #ffffff,
+    #FFACAC
+  );
+  @for $i from 1 through $amount {
+    &:nth-child(#{$i}) {
+      color: nth($colors, random(length($colors)));
+      top: random(80) * 1%;
+      left: random(80) * 1%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+      animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 0.8vw (random(50) - 25) * 0.8vh;
+      $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+      $x: if(random() > 0.5, -1, 1);
+      box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+    }
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
 .typewriter-effect {
     width: 0;
+    z-index: 20;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .1rem solid #E8C547; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -12,6 +56,7 @@
   }
 
   .typewriter-effect-2 {
+    z-index: 20;
     width: 0;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .1rem solid #E8C547; /* The typwriter cursor */
@@ -25,6 +70,7 @@
   }
 
   .appear {
+      z-index: 20;
       opacity: 0;
       animation: appear 1.5s;
       animation-delay: 6s;

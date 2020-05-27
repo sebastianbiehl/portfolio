@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        zIndex: 20,
     },
     menuButton: {
       marginRight: theme.spacing(2),

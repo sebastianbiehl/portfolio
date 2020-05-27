@@ -25,6 +25,7 @@
     "react-particles-js": "^3.2.1",
     "react-router-dom": "^5.2.0",
     "style-loader": "^1.2.1",
+    "tsparticles": "^1.14.3",
     "url-loader": "^4.1.0"
   },
   "devDependencies": {
