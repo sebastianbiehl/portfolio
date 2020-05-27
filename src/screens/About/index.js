@@ -21,11 +21,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     flex: 1,
     alignItems: "center",
-    justifyContent: "flex-start",
-    borderBottom: [`2px dotted ${theme.palette.primary.main}`],
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
-    color: "white",
+    justifyContent: "center",
+    backgroundColor: 'white',
+    color: "black",
   },
   body: {
     display: "flex",
@@ -50,14 +48,14 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
   const classes = useStyles();
   return (
-    <Container
+    <div
       id="about"
       className={classes.root}
-      data-aos="fade-right"
-      data-aos-delay="100"
-      data-aos-duration="1000"
     >
-      <Grid container spacing={5} justify="center" alignItems="center">
+    <Container data-aos="fade-right"
+      data-aos-delay="100"
+      data-aos-duration="1000">
+<Grid container spacing={5} justify="center" alignItems="center">
         <Grid item xs={12}>
           <Typography variant="h2" className={classes.title}>
             About
@@ -78,7 +76,9 @@ const About = () => {
         </Grid>
         
       </Grid>
-    </Container>
+      </Container>
+      
+    </div>
   );
 };
 

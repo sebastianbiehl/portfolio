@@ -10,13 +10,12 @@ import './style.scss';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        height: '100vh',
+        height: '90vh',
         display: 'flex',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        borderBottom: [`2px dotted ${theme.palette.primary.main}` ],
-        marginBottom: theme.spacing(5),
+        borderBottom: [`4px solid ${theme.palette.primary.main}`]
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -43,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 const Intro = () => {
     const classes = useStyles();
   return (
-    <Container className={classes.root}>
+    <div className={classes.root}>
         <div className="background">
             <span></span>
             <span></span>
@@ -74,7 +73,7 @@ const Intro = () => {
             </div>
             <Button color="primary" variant="outlined" href="#portfolio" className={[classes.button, 'appear']}>View my work <ArrowIcon /></Button>
         </div>
-    </Container>
+    </div>
   )
 };
 

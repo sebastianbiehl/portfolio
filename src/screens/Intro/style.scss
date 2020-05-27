@@ -65,7 +65,7 @@ $amount: 12;
     animation: 
         typing 3s steps(40, end),
       blink-caret 1s step-end infinite;
-    animation-delay: 3s;
+    animation-delay: 4.5s;
     animation-fill-mode: forwards;
   }
 
@@ -73,7 +73,7 @@ $amount: 12;
       z-index: 20;
       opacity: 0;
       animation: appear 1.5s;
-      animation-delay: 6s;
+      animation-delay: 8s;
       animation-fill-mode: forwards;
   }
 

@@ -29,6 +29,7 @@ const theme = createMuiTheme({
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: 'flex',
+    height: '100%',
     flex: 1,
     flexDirection: 'column',
   },
