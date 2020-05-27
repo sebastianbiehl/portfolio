@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        borderBottom: [`2px dotted ${theme.palette.primary.main}` ],
     },
     menuButton: {
       marginRight: theme.spacing(2),

@@ -1,6 +1,8 @@
 import React from "react";
 
 import { makeStyles } from '@material-ui/core/styles';
+
+import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import ArrowIcon from '@material-ui/icons/playArrow';
@@ -14,24 +16,23 @@ AOS.init();
 const useStyles = makeStyles((theme) => ({
     root: {
         height: '100vh',
-        width: '100vw',
         display: 'flex',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'black',
-        backgroundColor: theme.palette.secondary.light,
+        borderBottom: [`2px dotted ${theme.palette.primary.main}` ],
     },
   }));
 
 const About = () => {
     const classes = useStyles();
   return (
-    <div id="about" className={classes.root}>
-        <div data-aos="slide-right" data-aos-delay="100" data-aos-duration="1000" className={classes.root}>
-
-        </div>
-    </div>
+          <Container id="about" className={classes.root} data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-duration="1000"> 
+                <Skill />
+            </Container>
+    
   )
 };
 
