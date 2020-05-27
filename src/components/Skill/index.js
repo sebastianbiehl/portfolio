@@ -6,17 +6,21 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 function LinearProgressWithLabel(props) {
+    const classes = useStyles();
   return (
-    <Box display="flex" alignItems="center">
-      <Box width="80%" mr={1}>
-        <LinearProgress variant="determinate" {...props} />
+
+        <Box display="flex" alignItems="center">
+        <Typography className={classes.text} color="white">{props.label}</Typography>
+      <Box width="100%" mr={1}>
+        <LinearProgress className={classes.progress} variant="determinate" {...props} />
       </Box>
       <Box minWidth={35}>
-        <Typography variant="body2" color="textSecondary">{`${Math.round(
+        <Typography style={{fontSize: 20}} color="white">{`${Math.round(
           props.value,
         )}%`}</Typography>
       </Box>
     </Box>
+    
   );
 }
 
@@ -30,7 +34,17 @@ LinearProgressWithLabel.propTypes = {
 
 const useStyles = makeStyles({
   root: {
-    width: '80%',
+    width: '100%',
+  },
+  text: {
+        marginRight: 16,
+        minWidth: 100,
+        fontSize: 22,
+  },
+  progress: {
+      height: 20,
+      marginTop: 8,
+      marginBottom: 8,
   },
 });
 

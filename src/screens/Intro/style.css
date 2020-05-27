@@ -5,9 +5,9 @@
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     animation: 
-        typing 3.5s steps(40, end),
-      blink-caret 1s step-end infinite;
-    animation-delay: 2s;
+        typing 3s steps(40, end),
+      blink-caret 0.75s step-end infinite;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
   }
 
@@ -18,16 +18,16 @@
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     animation: 
-        typing 3.5s steps(40, end),
+        typing 3s steps(40, end),
       blink-caret 1s step-end infinite;
-    animation-delay: 7.5s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
   }
 
   .appear {
       opacity: 0;
-      animation: appear 1s;
-      animation-delay: 12s;
+      animation: appear 1.5s;
+      animation-delay: 6s;
       animation-fill-mode: forwards;
   }
 

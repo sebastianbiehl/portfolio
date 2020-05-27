@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     borderBottom: [`2px dotted ${theme.palette.primary.main}` ],
+    marginBottom: theme.spacing(5),
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -56,7 +57,7 @@ const Portfolio = () => {
     <Container
       id="portfolio"
       className={classes.root}
-      data-aos="fade-left"
+      data-aos="fade-right"
       data-aos-delay="100"
       data-aos-duration="1000"
     >

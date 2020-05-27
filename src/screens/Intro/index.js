@@ -6,18 +6,17 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import ArrowIcon from '@material-ui/icons/playArrow';
 
-import ProfilePicture from '../../img/profile-picture.jpg';
 import './style.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         height: '100vh',
-        width: '100vw',
         display: 'flex',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
         borderBottom: [`2px dotted ${theme.palette.primary.main}` ],
+        marginBottom: theme.spacing(5),
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -33,12 +32,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.primary.main,
         fontWeight: 'bold',
     },
-    picture: {
-        borderRadius: 500,
-        width: 250,
-        height: 250,
-        marginRight: theme.spacing(5),
-    },
+    
     button: {
         marginTop: theme.spacing(3),
         fontSize: '1.2rem',
@@ -50,14 +44,13 @@ const Intro = () => {
     const classes = useStyles();
   return (
     <Container className={classes.root}>
-        <img src={ProfilePicture} alt="Profile Picture" className={classes.picture} />
         <div id="home" className={classes.text}>
             <Typography className={[classes.title, 'typewriter-effect']} >Hi. My name is <span className={classes.name}>Sebastian Biehl</span>.</Typography>
             <div>
             <Typography className={[classes.title, 'typewriter-effect-2']}>I'm a German Web Developer.</Typography>
 
             </div>
-            <Button color="primary" variant="outlined" className={[classes.button, 'appear']}>View my work <ArrowIcon /></Button>
+            <Button color="primary" variant="outlined" href="#portfolio" className={[classes.button, 'appear']}>View my work <ArrowIcon /></Button>
         </div>
     </Container>
   )
